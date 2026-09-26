@@ -1,6 +1,6 @@
 # Web Mini Projects
 
-A collection of my mini web development projects, created for learning, practice, and experimentation.
+A collection of my mini web development projects, built for learning, practice, and experimentation.
 
 ## Categories
 
@@ -14,9 +14,8 @@ A collection of my mini web development projects, created for learning, practice
 
 HTML • CSS • JavaScript • React • Node.js • Python • PHP • MySQL • MongoDB
 
-> Learning by building 🚀
-
-
 ## 🚀 View Projects
 
-[Open Project Collection](https://adwaith-753.github.io/mini-web-projects/)
+[**Open Project Collection →**](https://adwaith-753.github.io/mini-web-projects/)
+
+> Learning by building 🚀
