@@ -1,0 +1,608 @@
+.earth_globe {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.earth_globe img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header {
+  text-align: center;
+}
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.header-title h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.header-title span {
+  color: #0057b7;
+}
+
+.header-subtitle p {
+  margin: 20px 0 10px;
+}
+
+.header-subtitle ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 8px 16px;
+  background-color: #c5dcf9;
+  border-radius: 20px;
+}
+
+.header-subtitle li:first-child {
+  list-style: none;
+}
+
+.flags {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.flag h2 {
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .header-title {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .header-title h1 {
+    font-size: 40px;
+  }
+
+  .earth_globe {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header-subtitle ul {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .flags {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+
+}
+
+
+/* Flag of Palau */
+.flag_palau {
+  width: 150px;
+  height: 100px;
+  background-color: #4aadd6;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_palau > div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  top: 25px;
+  left: 35px;
+}
+/* Flag of Japan */
+.flag_japan {
+  width: 150px;
+  height: 100px;
+  background-color: #ffffff;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_japan > div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #bc002d;
+  position: absolute;
+  top: 25px;
+  left: 45px;
+}
+/* Flag of ukraine */
+.flag_ukraine {
+  width: 150px;
+  height: 100px;
+  background-color: #0057b7;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_ukraine > div {
+  width: 100%;
+  height: 50px;
+  background-color: #ffdd00;
+  position: absolute;
+  top: 50%;
+}
+/* Flag of Latvia */
+.flag_latvia {
+  width: 150px;
+  height: 100px;
+  background-color: #9e1b34;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_latvia > div {
+  width: 100%;
+  height: 20px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 40%;
+}
+/* Flag of Nigeria */
+.flag_nigeria {
+  width: 150px;
+  height: 100px;
+  background-color: #008751;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_nigeria > div {
+  width: 25%;
+  height: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 35%;
+}
+/* Flag of Peru */
+.flag_peru {
+  width: 150px;
+  height: 100px;
+  background-color: #d91023;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_peru > div {
+  width: 25%;
+  height: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 35%;
+}
+
+/* Flag of Poland */
+.flag_poland {
+  width: 150px;
+  height: 100px;
+  background-color: #ffffff;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_poland > div {
+  width: 100%;
+  height: 50px;
+  background-color: #dc143c;
+  position: absolute;
+  top: 50%;
+}
+
+/* Flag of Monaco */
+.flag_monaco {
+  width: 120px;
+  height: 100px;
+  background-color: #dc143c;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_monaco > div {
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+}
+/* Flag of Indonesia */
+.flag_indonesia {
+  width: 150px;
+  height: 100px;
+  background-color: #dc143c;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_indonesia > div {
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+}
+
+/* Flag of Austria */
+.flag_austria {
+  width: 150px;
+  height: 100px;
+  background-color: #ef3340;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_austria > div {
+  width: 100%;
+  height: 30px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 40%;
+}
+
+/* Flag of Bangladesh */
+.flag_bangladesh {
+  width: 150px;
+  height: 100px;
+  background-color: #006a4e;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_bangladesh > div {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f42a41;
+  position: absolute;
+  top: 15px;
+  left: 35px;
+}
+
+/* Flag of Bahamas */
+.flag_bahamas {
+  width: 160px;
+  height: 100px;
+  background-color: #00a9ce;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_bahamas > div {
+  width: 100%;
+  height: 40px;
+  background-color: #ffca08;
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+.flag_bahamas .triangle {
+  width: 0;
+  height: 0;
+  border-top: 51px solid transparent;
+  border-bottom: 51px solid transparent;
+  border-left: 60px solid black;
+  position: absolute;
+  top: -30px;
+}
+
+/* Flag of Bahrain */
+.flag_bahrain {
+  width: 150px;
+  height: 96px;
+  background-color: #c8102e;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_bahrain > div {
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  background: white;
+}
+.flag_bahrain .triangle {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid #ffffff;
+  position: relative;
+  left: 40px;
+}
+/* Flag of Finland */
+.flag_finland {
+  width: 160px;
+  height: 100px;
+  background-color: #ffffff;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_finland > .left_to_right {
+  width: 100%;
+  height: 30px;
+  background-color: #002f6c;
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+.flag_finland > .up_to_down {
+  width: 20%;
+  height: 100%;
+  background-color: #002f6c;
+  position: absolute;
+  left: 40px;
+}
+
+/* Flag of Sweden */
+.flag_sweden {
+  width: 160px;
+  height: 100px;
+  background-color: #005293;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_sweden > .left_to_right {
+  width: 100%;
+  height: 25px;
+  background-color: #fecb00;
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+.flag_sweden > .up_to_down {
+  width: 15%;
+  height: 100%;
+  background-color: #fecb00;
+  position: absolute;
+  left: 40px;
+}
+
+/* Flag of Belgium */
+.flag_belgium {
+  width: 160px;
+  height: 100px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_belgium > .left {
+  width: 35%;
+  height: 100%;
+  background-color: #000000;
+  position: absolute;
+}
+.flag_belgium > .middle {
+  width: 35%;
+  height: 100%;
+  background-color: #fecb00;
+  position: absolute;
+  left: 35%;
+}
+.flag_belgium > .right {
+  width: 35%;
+  height: 100%;
+  background-color: #ed2939;
+  position: absolute;
+  left: 65%;
+}
+
+/* Flag of Switzerland */
+.flag_switzerland {
+  width: 105px;
+  height: 100px;
+  background-color: #ff0000;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_switzerland > .horizontal {
+  width: 80%;
+  height: 20%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 13px;
+  top: 40px;
+}
+.flag_switzerland > .vertical {
+  width: 20%;
+  height: 80%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 45px;
+  top: 10px;
+}
+
+/* Flag of Greece */
+.flag_greece {
+  width: 150px;
+  height: 100px;
+  background-color: #0d5eaf;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_greece .line {
+  width: 100%;
+  height: 11%;
+  position: relative;
+  background-color: #ffffff;
+  margin-top: 10px;
+}
+
+.flag_greece > div {
+  width: 40%;
+  height: 54%;
+  background-color: #0d5eaf;
+  position: relative;
+  margin-top: -91px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_greece .horizontal {
+  width: 100%;
+  height: 20%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0px;
+  top: 23px;
+}
+.flag_greece .vertical {
+  width: 23%;
+  height: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 25px;
+  top: 0px;
+}
+
+/* Flag of Yemen */
+.flag_yemen {
+  width: 150px;
+  height: 100px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_yemen > .top {
+  width: 100%;
+  height: 33%;
+  position: relative;
+  background-color: #ce1126;
+}
+
+.flag_yemen > .middle {
+  width: 100%;
+  height: 33%;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.flag_yemen > .bottom {
+  width: 100%;
+  height: 34%;
+  position: relative;
+  background-color: #000000;
+}
+
+/* Flag of Red Peak */
+.flag_redpeak {
+  width: 150px;
+  height: 100px;
+  background-color: #ffffff;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_redpeak > .left {
+  border-left: 0px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 75px solid #000000;
+  position: relative;
+  top: 0px;
+  width: 0px;
+  left: 0%;
+}
+
+.flag_redpeak > .right {
+  border-left: 75px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 75px solid #0057b7;
+  position: relative;
+  top: -75px;
+  width: 0px;
+  left: 50%;
+}
+
+.flag_redpeak > .bottom {
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 60px solid #d50000;
+  position: relative;
+  top: -110px;
+  width: 0px;
+  left: 12%;
+}
+
+/* Flag of Netherlands */
+
+.flag_netherlands {
+  width: 150px;
+  height: 100px;
+  background-color: #ffffff;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_netherlands .top {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  top: 0;
+  background-color: rgb(174, 28, 40);
+}
+
+.flag_netherlands .bottom {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+  background-color: rgb(33, 70, 139);
+}
+
+/* Flag of bolivia */
+
+.flag_bolivia {
+  width: 150px;
+  height: 100px;
+  background-color: #fff;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_bolivia .top {
+  position: absolute;
+  width: 100%;
+  height: 33.33%;
+  top: 0;
+  background-color: rgb(213, 43, 30);
+}
+
+.flag_bolivia .middle {
+  position: absolute;
+  width: 100%;
+  height: 33.33%;
+  top: 33.33%;
+  background-color: rgb(249, 227, 0);
+}
+
+.flag_bolivia .bottom {
+  position: absolute;
+  width: 100%;
+  height: 33.33%;
+  bottom: 0;
+  background-color: rgb(0, 121, 52);
+}
