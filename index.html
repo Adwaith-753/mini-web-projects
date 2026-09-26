@@ -3,76 +3,714 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects</title>
+
+    <title>My Development Projects</title>
 
     <style>
       * {
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
       }
 
-      body {
-        margin: 0;
-        padding: 40px;
-        font-family: Arial, sans-serif;
-        background: #ffffff;
+      html {
+        scroll-behavior: smooth;
       }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        color: #1f2937;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* ================= HEADER ================= */
+
+      header {
+        background: #111827;
+        color: white;
+        text-align: center;
+        padding: 75px 20px;
+      }
+
+      header h1 {
+        font-size: 46px;
+        margin-bottom: 15px;
+      }
+
+      header p {
+        max-width: 750px;
+        margin: auto;
+        color: #d1d5db;
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      /* ================= NAVIGATION ================= */
+
+      nav {
+        background: white;
+        border-bottom: 1px solid #e5e7eb;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav ul {
+        list-style: none;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 30px;
+
+        padding: 18px 20px;
+      }
+
+      nav a {
+        color: #374151;
+        font-size: 14px;
+        font-weight: bold;
+
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: #2563eb;
+      }
+
+      /* ================= MAIN ================= */
+
+      main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 70px 20px;
+      }
+
+      /* ================= CATEGORY ================= */
+
+      .category {
+        margin-bottom: 80px;
+      }
+
+      .category-header {
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      .category-header h2 {
+        font-size: 32px;
+        margin-bottom: 8px;
+        color: #111827;
+      }
+
+      .category-header p {
+        color: #6b7280;
+        font-size: 16px;
+      }
+
+      /* ================= PROJECT GRID ================= */
 
       .projects {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
+        display: grid;
+
+        /* 4 CARDS PER ROW */
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 25px;
       }
+
+      /* ================= PROJECT CARD ================= */
 
       .project {
-        width: 200px;
-        text-decoration: none;
-        color: #000;
+        background: white;
+
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+
+        overflow: hidden;
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
       }
 
-      .project img {
+      .project:hover {
+        transform: translateY(-7px);
+
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      /* ================= IMAGE ================= */
+
+      .project-image {
+        display: block;
+        overflow: hidden;
+      }
+
+      .project-image img {
         width: 100%;
-        height: 100%;
+        height: 170px;
+
         object-fit: cover;
         display: block;
+
+        transition: transform 0.4s ease;
       }
 
-      .project-name {
-        margin-top: 15px;
-        font-size: 15px;
-        font-weight: 600;
+      .project:hover img {
+        transform: scale(1.06);
+      }
+
+      /* ================= CONTENT ================= */
+
+      .project-content {
+        padding: 18px;
+      }
+
+      .project-content h3 {
+        font-size: 18px;
+        color: #111827;
+
+        margin-bottom: 8px;
+      }
+
+      .project-content p {
+        font-size: 13px;
+        line-height: 1.6;
+
+        color: #6b7280;
+
+        margin-bottom: 15px;
+      }
+
+      .view-project {
+        color: #2563eb;
+
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      .view-project:hover {
+        color: #1d4ed8;
+      }
+
+      /* ================= FOOTER ================= */
+
+      footer {
+        background: #111827;
+
+        color: white;
+
         text-align: center;
+
+        padding: 45px 20px;
+      }
+
+      footer h2 {
+        margin-bottom: 10px;
+      }
+
+      footer p {
+        color: #9ca3af;
+
+        font-size: 14px;
+
+        margin: 5px;
+      }
+
+      /* ================= TABLET ================= */
+
+      @media (max-width: 1000px) {
+        .projects {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* ================= SMALL TABLET ================= */
+
+      @media (max-width: 750px) {
+        .projects {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        header h1 {
+          font-size: 38px;
+        }
+      }
+
+      /* ================= MOBILE ================= */
+
+      @media (max-width: 500px) {
+        .projects {
+          grid-template-columns: 1fr;
+        }
+
+        header {
+          padding: 55px 20px;
+        }
+
+        header h1 {
+          font-size: 30px;
+        }
+
+        header p {
+          font-size: 15px;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div class="projects">
-      <a
-        href="Projects/Restaurant-Menu-website/index.html"
-        target="_blank"
-        class="project"
-      >
-        <img src="image/Restaurant_Menu.png" alt="Project 1" />
-        <div class="project-name">Restaurant Menu</div>
-      </a>
+    <!-- ================= HEADER ================= -->
 
-      <a
-        href="Projects/Shopnest-Static-Website/index.html"
-        target="_blank"
-        class="project"
-      >
-        <img src="image/ShopNest_Store.png" alt="Project 2" />
-        <div class="project-name">ShopNest Store</div>
-      </a>
+    <header>
+      <h1>My Development Projects</h1>
 
-      <a
-        href="Projects/FlagProject/index.html"
-        target="_blank"
-        class="project"
-      >
-        <img src="image/Flag.png" alt="Project 3" />
-        <div class="project-name">CSS Flags Gallery</div>
-      </a>
-    </div>
+      <p>
+        Explore my projects across HTML & CSS, JavaScript, frontend development,
+        backend development, APIs, databases, and full-stack applications.
+      </p>
+    </header>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+      <ul>
+        <li>
+          <a href="#html-css">HTML & CSS</a>
+        </li>
+
+        <li>
+          <a href="#javascript">JavaScript</a>
+        </li>
+
+        <li>
+          <a href="#frontend">Frontend</a>
+        </li>
+
+        <li>
+          <a href="#backend">Backend</a>
+        </li>
+
+        <li>
+          <a href="#fullstack">Full Stack</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- =================================================
+         HTML & CSS
+    ================================================= -->
+
+      <section class="category" id="html-css">
+        <div class="category-header">
+          <h2>HTML & CSS</h2>
+
+          <p>Static websites and UI projects</p>
+        </div>
+
+        <div class="projects">
+          <!-- CARD 1 -->
+
+          <article class="project">
+            <a
+              class="project-image"
+              href="Projects/Restaurant-Menu-website/index.html"
+              target="_blank"
+            >
+              <img src="image/Restaurant_Menu.png" alt="Restaurant Menu" />
+            </a>
+
+            <div class="project-content">
+              <h3>Restaurant Menu</h3>
+
+              <p>Modern restaurant menu website.</p>
+
+              <a
+                class="view-project"
+                href="Projects/Restaurant-Menu-website/index.html"
+                target="_blank"
+              >
+                View Project →
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+
+          <article class="project">
+            <a
+              class="project-image"
+              href="Projects/Shopnest-Static-Website/index.html"
+              target="_blank"
+            >
+              <img src="image/ShopNest_Store.png" alt="ShopNest Store" />
+            </a>
+
+            <div class="project-content">
+              <h3>ShopNest Store</h3>
+
+              <p>Static e-commerce website.</p>
+
+              <a
+                class="view-project"
+                href="Projects/Shopnest-Static-Website/index.html"
+                target="_blank"
+              >
+                View Project →
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+
+          <article class="project">
+            <a
+              class="project-image"
+              href="Projects/FlagProject/index.html"
+              target="_blank"
+            >
+              <img src="image/Flag.png" alt="CSS Flags Gallery" />
+            </a>
+
+            <div class="project-content">
+              <h3>CSS Flags Gallery</h3>
+
+              <p>Country flags created using CSS.</p>
+
+              <a
+                class="view-project"
+                href="Projects/FlagProject/index.html"
+                target="_blank"
+              >
+                View Project →
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 4 -->
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/Restaurant_Menu.png" alt="Demo UI Project" />
+            </a>
+
+            <div class="project-content">
+              <h3>Demo UI Project</h3>
+
+              <p>Example HTML and CSS interface.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <!--
+          ADD CARD 5 HERE
+
+          It will automatically move
+          to the second row.
+        --></div>
+      </section>
+
+      <!-- =================================================
+         JAVASCRIPT
+    ================================================= -->
+
+      <section class="category" id="javascript">
+        <div class="category-header">
+          <h2>HTML, CSS & JavaScript</h2>
+
+          <p>Interactive web projects</p>
+        </div>
+
+        <div class="projects">
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/Restaurant_Menu.png" alt="JavaScript Demo" />
+            </a>
+
+            <div class="project-content">
+              <h3>JavaScript App</h3>
+
+              <p>Interactive browser application.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/ShopNest_Store.png" alt="JavaScript Demo" />
+            </a>
+
+            <div class="project-content">
+              <h3>Interactive UI</h3>
+
+              <p>Interactive website using JavaScript.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/Flag.png" alt="JavaScript Demo" />
+            </a>
+
+            <div class="project-content">
+              <h3>JavaScript Tool</h3>
+
+              <p>Browser-based JavaScript project.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/Restaurant_Menu.png" alt="JavaScript Demo" />
+            </a>
+
+            <div class="project-content">
+              <h3>Web Application</h3>
+
+              <p>Dynamic frontend application.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+        </div>
+      </section>
+
+      <!-- =================================================
+         FRONTEND
+    ================================================= -->
+
+      <section class="category" id="frontend">
+        <div class="category-header">
+          <h2>Frontend Development</h2>
+
+          <p>React and other frontend projects</p>
+        </div>
+
+        <div class="projects">
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/ShopNest_Store.png" alt="React Project" />
+            </a>
+
+            <div class="project-content">
+              <h3>React Project</h3>
+
+              <p>Modern React frontend application.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/Restaurant_Menu.png" alt="Frontend Project" />
+            </a>
+
+            <div class="project-content">
+              <h3>React Dashboard</h3>
+
+              <p>Responsive frontend dashboard.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/Flag.png" alt="Frontend Project" />
+            </a>
+
+            <div class="project-content">
+              <h3>Frontend UI</h3>
+
+              <p>Modern responsive user interface.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/ShopNest_Store.png" alt="Frontend Project" />
+            </a>
+
+            <div class="project-content">
+              <h3>React Website</h3>
+
+              <p>Component-based frontend project.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+        </div>
+      </section>
+
+      <!-- =================================================
+         BACKEND
+    ================================================= -->
+
+      <section class="category" id="backend">
+        <div class="category-header">
+          <h2>Backend Development</h2>
+
+          <p>APIs and server-side projects</p>
+        </div>
+
+        <div class="projects">
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/Restaurant_Menu.png" alt="Backend API" />
+            </a>
+
+            <div class="project-content">
+              <h3>REST API</h3>
+
+              <p>Backend API project.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/ShopNest_Store.png" alt="Backend Project" />
+            </a>
+
+            <div class="project-content">
+              <h3>Node.js API</h3>
+
+              <p>Server-side application using Node.js.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/Flag.png" alt="Database Project" />
+            </a>
+
+            <div class="project-content">
+              <h3>Database Project</h3>
+
+              <p>Backend database integration project.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/Restaurant_Menu.png" alt="Backend Application" />
+            </a>
+
+            <div class="project-content">
+              <h3>Backend Application</h3>
+
+              <p>Server-side web application.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+        </div>
+      </section>
+
+      <!-- =================================================
+         FULL STACK
+    ================================================= -->
+
+      <section class="category" id="fullstack">
+        <div class="category-header">
+          <h2>Full Stack Development</h2>
+
+          <p>Frontend, backend, APIs and database projects</p>
+        </div>
+
+        <div class="projects">
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/ShopNest_Store.png" alt="Full Stack Project" />
+            </a>
+
+            <div class="project-content">
+              <h3>Full Stack Store</h3>
+
+              <p>Complete e-commerce application.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/Restaurant_Menu.png" alt="Full Stack Project" />
+            </a>
+
+            <div class="project-content">
+              <h3>Full Stack App</h3>
+
+              <p>Frontend and backend application.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/Flag.png" alt="Full Stack Project" />
+            </a>
+
+            <div class="project-content">
+              <h3>Web Application</h3>
+
+              <p>Full-stack web application.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+
+          <article class="project">
+            <!-- <a class="project-image" href="#">
+              <img src="image/ShopNest_Store.png" alt="Full Stack Project" />
+            </a>
+
+            <div class="project-content">
+              <h3>Complete Web App</h3>
+
+              <p>Frontend, backend and database system.</p>
+
+              <a class="view-project" href="#"> View Project → </a>
+            </div> -->
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <h2>My Development Portfolio</h2>
+
+      <p>Building websites, applications and full-stack solutions.</p>
+
+      <p>HTML • CSS • JavaScript • React • Backend • APIs • Databases</p>
+
+      <p>© 2026 My Development Projects</p>
+    </footer>
   </body>
 </html>
