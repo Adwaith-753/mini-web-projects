@@ -674,3 +674,63 @@ header {
   bottom: 0;
   background-color: rgb(232, 17, 45);
 }
+
+/* Flag of Bulgaria */
+
+.flag_bulgaria {
+  width: 150px;
+  height: 100px;
+  background-color: #fff;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_bulgaria .middle {
+  position: absolute;
+  width: 100%;
+  height: 33%;
+  top: 35%;
+  background-color: rgb(0, 150, 110);
+}
+
+.flag_bulgaria .bottom {
+  position: absolute;
+  width: 100%;
+  height: 33%;
+  bottom: 0;
+  background-color: rgb(214, 38, 18);
+}
+
+/* Flag of  Palestine */
+
+.flag_palestine {
+  width: 150px;
+  height: 100px;
+  background-color: #fff;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.flag_palestine .left_triangle {
+  position: absolute;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid red;
+  z-index: 1000;
+}
+
+.flag_palestine .top {
+  position: absolute;
+  width: 100%;
+  height: 33%;
+  top: 0;
+  background-color: rgb(6, 6, 6);
+}
+
+.flag_palestine .bottom {
+  position: absolute;
+  width: 100%;
+  height: 33%;
+  bottom: 0;
+  background-color: rgb(0, 122, 61);
+}
